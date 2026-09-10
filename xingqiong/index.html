@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>星穹轨道-星际题材科幻作品与世界观探索指南</title>
+<meta name="description" content="星穹轨道是围绕星际科幻题材的内容指南站，整理星穹轨道相关的世界观设定、角色阵营、剧情线索、版本活动与新手入门建议，帮助读者系统了解这一星际冒险题材的核心内容。">
+<meta name="keywords" content="星穹轨道,星际科幻,星穹列车,银河冒险,科幻世界观">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#070b18;
+--bg-soft:#0d1428;
+--panel:#111a33;
+--line:rgba(120,160,255,.16);
+--text:#e8eeff;
+--muted:#9aa8cc;
+--accent:#6ea8ff;
+--accent2:#b98cff;
+--gold:#ffd479;
+}
+body{
+font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.75;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* 星空背景 */
+.stars{
+position:fixed;inset:0;z-index:0;pointer-events:none;
+background:
+radial-gradient(1.5px 1.5px at 12% 18%,rgba(255,255,255,.9),transparent),
+radial-gradient(1.5px 1.5px at 78% 8%,rgba(180,210,255,.8),transparent),
+radial-gradient(1px 1px at 34% 62%,rgba(255,255,255,.7),transparent),
+radial-gradient(1.5px 1.5px at 62% 44%,rgba(200,220,255,.75),transparent),
+radial-gradient(1px 1px at 88% 72%,rgba(255,255,255,.6),transparent),
+radial-gradient(1px 1px at 22% 88%,rgba(190,215,255,.7),transparent),
+radial-gradient(1px 1px at 52% 14%,rgba(255,255,255,.55),transparent);
+opacity:.85;
+}
+body::before{
+content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+background:
+radial-gradient(900px 520px at 80% -10%,rgba(110,168,255,.18),transparent 70%),
+radial-gradient(760px 480px at 8% 12%,rgba(185,140,255,.14),transparent 70%),
+radial-gradient(1000px 600px at 50% 110%,rgba(60,120,255,.10),transparent 70%);
+}
+.page{position:relative;z-index:1}
+
+/* 页眉 */
+header.site-head{
+position:sticky;top:0;z-index:50;
+background:rgba(7,11,24,.82);
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line);
+}
+.head-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:.5px}
+.logo-mark{
+width:30px;height:30px;border-radius:50%;
+background:conic-gradient(from 210deg,var(--accent),var(--accent2),var(--gold),var(--accent));
+box-shadow:0 0 18px rgba(110,168,255,.55);
+position:relative;flex:none;
+}
+.logo-mark::after{
+content:"";position:absolute;inset:8px;border-radius:50%;background:var(--bg);
+}
+.logo small{display:block;font-size:11px;font-weight:400;color:var(--muted);letter-spacing:2px}
+nav.main-nav{display:flex;gap:6px;flex-wrap:wrap}
+nav.main-nav a{
+padding:8px 14px;border-radius:8px;font-size:14.5px;color:var(--muted);
+transition:.22s;
+}
+nav.main-nav a:hover{color:var(--text);background:rgba(110,168,255,.12)}
+.head-cta{
+padding:9px 18px;border-radius:9px;font-size:14px;font-weight:600;
+background:linear-gradient(120deg,var(--accent),var(--accent2));
+color:#08122b;white-space:nowrap;
+}
+
+/* 首屏 */
+.hero{padding:64px 0 54px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.tag{
+display:inline-flex;align-items:center;gap:8px;
+font-size:12.5px;letter-spacing:1.6px;color:var(--gold);
+border:1px solid rgba(255,212,121,.35);
+padding:5px 13px;border-radius:99px;margin-bottom:20px;
+background:rgba(255,212,121,.06);
+}
+.hero h1{
+font-size:clamp(30px,4.4vw,50px);
+line-height:1.24;font-weight:800;letter-spacing:.5px;
+background:linear-gradient(100deg,#ffffff 18%,#a9c8ff 58%,#c9a6ff 96%);
+-webkit-background-clip:text;background-clip:text;color:transparent;
+margin-bottom:18px;
+}
+.hero p.lead{color:var(--muted);font-size:16.5px;max-width:640px;margin-bottom:26px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+display:inline-block;padding:12px 26px;border-radius:10px;font-size:15px;font-weight:600;
+transition:.25s;border:1px solid transparent;
+}
+.btn-primary{background:linear-gradient(120deg,var(--accent),var(--accent2));color:#08122b}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(110,168,255,.34)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+.orbit-card{
+position:relative;border-radius:20px;padding:26px;
+background:linear-gradient(160deg,rgba(24,36,68,.9),rgba(12,18,38,.9));
+border:1px solid var(--line);
+box-shadow:0 26px 60px rgba(0,0,0,.45);
+overflow:hidden;
+}
+.orbit-card::before{
+content:"";position:absolute;width:280px;height:280px;right:-90px;top:-110px;border-radius:50%;
+background:radial-gradient(circle,rgba(110,168,255,.30),transparent 68%);
+}
+.orbit-ring{
+width:150px;height:150px;margin:6px auto 20px;border-radius:50%;
+border:1px dashed rgba(150,180,255,.5);position:relative;
+display:flex;align-items:center;justify-content:center;
+animation:spin 26s linear infinite;
+}
+.orbit-ring span{
+position:absolute;width:14px;height:14px;border-radius:50%;
+background:var(--gold);box-shadow:0 0 14px var(--gold);
+top:-7px;left:calc(50% - 7px);
+}
+.orbit-ring .core{
+width:74px;height:74px;border-radius:50%;animation:spin 26s linear infinite reverse;
+background:radial-gradient(circle at 35% 30%,#cfe2ff,#5f8dff 55%,#2a4bb0);
+box-shadow:0 0 32px rgba(110,168,255,.7);
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orbit-card h3{font-size:17px;margin-bottom:12px;text-align:center}
+.orbit-card ul{list-style:none;display:grid;gap:10px}
+.orbit-card li{
+display:flex;justify-content:space-between;gap:12px;
+font-size:14px;color:var(--muted);
+padding-bottom:9px;border-bottom:1px dashed rgba(120,160,255,.14);
+}
+.orbit-card li:last-child{border-bottom:none;padding-bottom:0}
+.orbit-card li b{color:var(--text);font-weight:600}
+
+/* 通用区块 */
+section.block{padding:52px 0}
+.sec-head{margin-bottom:30px;max-width:760px}
+.sec-head .kicker{font-size:12.5px;letter-spacing:2.4px;color:var(--accent);margin-bottom:10px}
+.sec-head h2{font-size:clamp(22px,2.8vw,30px);font-weight:700;margin-bottom:12px}
+.sec-head p{color:var(--muted);font-size:15.5px}
+
+/* 概念卡片 */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+background:linear-gradient(165deg,rgba(20,30,58,.85),rgba(11,17,35,.85));
+border:1px solid var(--line);border-radius:16px;padding:24px;
+transition:.28s;
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(110,168,255,.45);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.card .ico{
+width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+font-size:19px;margin-bottom:16px;
+background:rgba(110,168,255,.14);border:1px solid rgba(110,168,255,.3);color:var(--accent);
+}
+.card h3{font-size:17px;margin-bottom:10px}
+.card p{font-size:14.5px;color:var(--muted)}
+
+/* 阵营列表 */
+.faction-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.faction{
+display:flex;gap:16px;padding:20px;border-radius:14px;
+background:rgba(15,23,46,.75);border:1px solid var(--line);
+}
+.faction .badge{
+flex:none;width:46px;height:46px;border-radius:12px;
+display:flex;align-items:center;justify-content:center;
+font-weight:700;font-size:15px;color:#08122b;
+background:linear-gradient(135deg,var(--accent),var(--accent2));
+}
+.faction h3{font-size:16px;margin-bottom:6px}
+.faction p{font-size:14px;color:var(--muted)}
+
+/* 路线时间轴 */
+.timeline{position:relative;padding-left:26px}
+.timeline::before{
+content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+background:linear-gradient(180deg,var(--accent),var(--accent2),transparent);
+}
+.tl-item{position:relative;padding:0 0 26px 22px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+content:"";position:absolute;left:-26px;top:6px;width:14px;height:14px;border-radius:50%;
+background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 12px rgba(110,168,255,.6);
+}
+.tl-item h3{font-size:16px;margin-bottom:6px}
+.tl-item p{font-size:14.5px;color:var(--muted)}
+
+/* 新手建议 */
+.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.tip{
+padding:22px;border-radius:14px;border:1px solid var(--line);
+background:linear-gradient(150deg,rgba(24,36,68,.7),rgba(11,17,35,.7));
+}
+.tip h3{font-size:16px;margin-bottom:10px;display:flex;align-items:center;gap:9px}
+.tip h3 i{
+font-style:normal;font-size:12px;color:var(--gold);
+border:1px solid rgba(255,212,121,.4);border-radius:6px;padding:1px 7px;
+}
+.tip ul{list-style:none;display:grid;gap:8px}
+.tip li{font-size:14.3px;color:var(--muted);padding-left:16px;position:relative}
+.tip li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* 侧栏 + 主内容两栏 */
+.split{display:grid;grid-template-columns:1.55fr .95fr;gap:32px;align-items:start}
+.panel{
+background:rgba(13,20,40,.8);border:1px solid var(--line);border-radius:16px;padding:24px;
+}
+.panel h3{font-size:16.5px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.news-list{list-style:none;display:grid;gap:14px}
+.news-list li{display:flex;gap:13px;font-size:14.5px}
+.news-list li span{
+flex:none;font-size:12px;color:var(--accent);border:1px solid rgba(110,168,255,.35);
+border-radius:5px;padding:1px 7px;height:fit-content;margin-top:4px;
+}
+.news-list li p{color:var(--muted);font-size:14px}
+.side-item{padding:14px 0;border-bottom:1px dashed rgba(120,160,255,.16)}
+.side-item:last-child{border-bottom:none;padding-bottom:0}
+.side-item h4{font-size:15px;margin-bottom:5px}
+.side-item p{font-size:13.8px;color:var(--muted)}
+
+/* FAQ */
+.faq{display:grid;gap:14px}
+details{
+border:1px solid var(--line);border-radius:13px;padding:16px 20px;
+background:rgba(13,20,40,.7);transition:.25s;
+}
+details[open]{border-color:rgba(110,168,255,.45);background:rgba(18,28,54,.85)}
+summary{
+cursor:pointer;font-size:15.5px;font-weight:600;list-style:none;
+display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:19px;font-weight:400}
+details[open] summary::after{content:"−"}
+details p{margin-top:12px;font-size:14.5px;color:var(--muted)}
+
+/* 页脚 */
+footer.site-foot{
+margin-top:36px;border-top:1px solid var(--line);
+background:rgba(6,10,22,.9);padding:44px 0 26px;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
+.foot-grid h4{font-size:14.5px;margin-bottom:14px;color:var(--text)}
+.foot-grid p,.foot-grid a{font-size:13.8px;color:var(--muted);display:block;margin-bottom:9px}
+.foot-grid a:hover{color:var(--accent)}
+.foot-bottom{
+border-top:1px solid var(--line);padding-top:20px;
+display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+font-size:13px;color:#6f7da3;
+}
+
+/* 响应式 */
+@media(max-width:980px){
+.hero-grid{grid-template-columns:1fr;gap:34px}
+.split{grid-template-columns:1fr}
+.grid-3{grid-template-columns:repeat(2,1fr)}
+.foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:720px){
+nav.main-nav{display:none}
+.head-inner{height:60px}
+.hero{padding:44px 0 36px}
+.grid-3{grid-template-columns:1fr}
+.faction-wrap{grid-template-columns:1fr}
+.tips{grid-template-columns:1fr}
+section.block{padding:38px 0}
+.foot-grid{grid-template-columns:1fr;gap:22px}
+.hero-actions .btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<div class="page">
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark"></span>
+      <span>星穹轨道<small>STELLAR ORBIT</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#concept">世界观</a>
+      <a href="#faction">阵营势力</a>
+      <a href="#route">剧情脉络</a>
+      <a href="#start">入门指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="head-cta" href="#start">新手入门</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">星际冒险 · 世界观导读</span>
+        <h1>星穹轨道：一次关于银河、列车与未知文明的漫游</h1>
+        <p class="lead">星穹轨道指向的是以星际旅行为核心的科幻题材作品。它把“乘着一列穿越星海的列车，在无数星球间停靠”作为叙事起点，串联起不同文明的兴衰、角色的成长与阵营之间的博弈。本页整理这一题材的世界观框架、势力构成、剧情线索与入门思路，帮助刚接触的读者快速建立整体认知。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#concept">从世界观读起</a>
+          <a class="btn btn-ghost" href="#start">新手怎么开始</a>
+        </div>
+      </div>
+      <aside class="orbit-card">
+        <div class="orbit-ring"><span></span><div class="core"></div></div>
+        <h3>题材速览</h3>
+        <ul>
+          <li><span>题材类型</span><b>星际科幻 / 冒险</b></li>
+          <li><span>核心载体</span><b>星穹列车</b></li>
+          <li><span>叙事方式</span><b>星球单元 + 主线推进</b></li>
+          <li><span>关注重点</span><b>文明、角色、抉择</b></li>
+          <li><span>适合人群</span><b>科幻与剧情向读者</b></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 世界观 -->
+  <section class="block" id="concept">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">WORLDVIEW</div>
+        <h2>世界观：为什么“轨道”是理解这一切的关键</h2>
+        <p>在星穹轨道的设定里，宇宙并非一片可以随意穿行的空旷空间，而是由能量、航路与文明遗迹共同构成的复杂网络。理解这套底层规则，比记住具体情节更重要。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="ico">✦</div>
+          <h3>星穹列车与开拓</h3>
+          <p>列车是贯穿整条叙事线的载体，它沿着既定航路在星球之间停靠。每一次停靠都意味着一次“开拓”——记录当地文明、解决当地矛盾，并把它接入更大的宇宙图景。列车本身既是交通工具，也是叙事视角。</p>
+        </article>
+        <article class="card">
+          <div class="ico">◈</div>
+          <h3>命途与力量体系</h3>
+          <p>题材中的力量往往不来自单纯的等级积累，而与角色所选择的“道路”相关。不同的道路决定能力方向、行为准则与代价，这让角色成长带有明显的价值取向，而非纯粹数值提升。</p>
+        </article>
+        <article class="card">
+          <div class="ico">✧</div>
+          <h3>文明与遗迹</h3>
+          <p>大量星球上留有前代文明的技术与痕迹。它们既可能是资源，也可能是隐患。这种“遗迹叙事”让世界观始终保留悬念：读者看到的秩序，可能只是更早一次崩溃之后的残余。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 阵营 -->
+  <section class="block" id="faction">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">FACTIONS</div>
+        <h2>阵营与势力：冲突从哪里来</h2>
+        <p>星际题材的张力通常来自不同立场对同一件事的解释差异。以下按常见叙事功能归纳几类势力角色，便于梳理剧情中谁在推动、谁在阻碍。</p>
+      </div>
+      <div class="faction-wrap">
+        <div class="faction">
+          <div class="badge">旅</div>
+          <div>
+            <h3>列车一方</h3>
+            <p>以探索与记录为核心目标，倾向在冲突中寻找沟通可能。立场相对中立，但正因为中立，常常被卷入各方博弈的中心。</p>
+          </div>
+        </div>
+        <div class="faction">
+          <div class="badge">序</div>
+          <div>
+            <h3>秩序维护者</h3>
+            <p>强调规则、边界与稳定，认为无序扩张会带来灾难。与探索方在“是否应该介入”这一问题上经常产生分歧。</p>
+          </div>
+        </div>
+        <div class="faction">
+          <div class="badge">墟</div>
+          <div>
+            <h3>破坏与混沌势力</h3>
+            <p>以颠覆既有结构为目的，行动难以预测。它们的存在往往用于揭示现有秩序中被掩盖的问题，而非单纯的敌人。</p>
+          </div>
+        </div>
+        <div class="faction">
+          <div class="badge">遗</div>
+          <div>
+            <h3>失落文明后裔</h3>
+            <p>承载着已消亡文明的技术与记忆，立场因个体而异。他们既是世界观的补充说明，也常常是主线谜题的关键线索。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 剧情脉络 -->
+  <section class="block" id="route">
+    <div class="wrap split">
+      <div>
+        <div class="sec-head">
+          <div class="kicker">STORYLINE</div>
+          <h2>剧情脉络：一条可以按顺序理解的线索</h2>
+          <p>星穹轨道的叙事采用“主线 + 星球单元”的结构。按下面的顺序理解，比零散地看片段更容易建立完整印象。</p>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <h3>起点：登上列车</h3>
+            <p>故事从主角获得同行资格开始。这一段的作用是建立基本规则：列车如何航行、成员如何协作、世界的基本面貌是什么。</p>
+          </div>
+          <div class="tl-item">
+            <h3>展开：逐个星球的单元故事</h3>
+            <p>每到一颗星球，都会遇到一个相对独立的事件。单元故事看似各自成篇，但会持续抛出与主线相关的线索，例如某个反复出现的名词或人物。</p>
+          </div>
+          <div class="tl-item">
+            <h3>交汇：势力开始正面碰撞</h3>
+            <p>当单元积累到一定程度，前期埋下的势力关系会集中爆发。此时读者会发现，之前每个星球的选择都在影响整体走向。</p>
+          </div>
+          <div class="tl-item">
+            <h3>推进：主线谜题逐步揭开</h3>
+            <p>关于列车来源、航路终点与更大威胁的答案会陆续给出。这一阶段信息密度较高，适合回看前面的伏笔。</p>
+          </div>
+        </div>
+      </div>
+      <aside class="panel">
+        <h3>值得留意的线索类型</h3>
+        <div class="side-item">
+          <h4>反复出现的名词</h4>
+          <p>同一概念在不同星球被不同人提起时，通常意味着它属于更高层级的主线设定。</p>
+        </div>
+        <div class="side-item">
+          <h4>立场模糊的角色</h4>
+          <p>态度不明确的角色往往承担后续反转功能，留意他们说过但未解释的话。</p>
+        </div>
+        <div class="side-item">
+          <h4>被毁坏的技术</h4>
+          <p>失效或残缺的装置常与文明断层有关，是理解世界观历史的重要入口。</p>
+        </div>
+        <div class="side-item">
+          <h4>列车的异常反应</h4>
+          <p>当列车本身出现变化时，通常代表主线进入新阶段。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 入门指南 -->
+  <section class="block" id="start">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">GETTING STARTED</div>
+        <h2>入门指南：第一次接触应该关注什么</h2>
+        <p>如果你是因为“星穹轨道”这个说法第一次了解这个题材，不必急着记住所有名词。按下面几个方向切入，理解成本会低很多。</p>
+      </div>
+      <div class="tips">
+        <div class="tip">
+          <h3><i>01</i>先建立空间感</h3>
+          <ul>
+            <li>把列车理解成一条固定的路线，而不是随机跳跃</li>
+            <li>记住每个星球的大致风格与主要矛盾即可</li>
+            <li>不必一开始就弄清全部星际地理</li>
+          </ul>
+        </div>
+        <div class="tip">
+          <h3><i>02</i>再理解人物关系</h3>
+          <ul>
+            <li>优先记住与主角长期同行的核心成员</li>
+            <li>把阵营当作立场，而不是好坏标签</li>
+            <li>角色的转变通常与所在星球的事件有关</li>
+          </ul>
+        </div>
+        <div class="tip">
+          <h3><i>03</i>最后补设定细节</h3>
+          <ul>
+            <li>遇到不懂的专有名词先记下来，后续会重复出现</li>
+            <li>力量体系可以等剧情需要时再回看</li>
+            <li>设定服务于故事，不必脱离剧情单独背诵</li>
+          </ul>
+        </div>
+        <div class="tip">
+          <h3><i>04</i>选择适合的接触方式</h3>
+          <ul>
+            <li>偏好剧情：按顺序推进，不跳章节</li>
+            <li>偏好设定：先看世界观与阵营介绍</li>
+            <li>时间有限：先看单元故事，再补主线</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 动态与 FAQ -->
+  <section class="block">
+    <div class="wrap split">
+      <div>
+        <div class="sec-head">
+          <div class="kicker">FAQ</div>
+          <h2>常见问题</h2>
+          <p>以下问题来自对这类星际科幻题材最常见的疑问，回答尽量保持稳妥，不涉及无法确认的具体信息。</p>
+        </div>
+        <div class="faq">
+          <details open>
+            <summary>星穹轨道和一般的太空科幻有什么区别？</summary>
+            <p>它更强调“沿途停靠”的结构，而不是一次远征。每颗星球都是一个相对完整的小世界，主线则通过这些星球之间的共性慢慢浮现。这种结构让阅读门槛更低，同时保留了长线悬念。</p>
+          </details>
+          <details>
+            <summary>没有科幻基础能看懂吗？</summary>
+            <p>可以。这类题材的专有名词通常在剧情中会被反复解释，只要按顺序推进，理解不会构成障碍。真正需要留意的是人物立场，而不是技术设定。</p>
+          </details>
+          <details>
+            <summary>应该先看主线还是先看单元故事？</summary>
+            <p>建议按发布顺序。单元故事里常埋有主线线索，跳过之后回看容易产生割裂感。如果时间有限，也可以先看单元故事建立兴趣，再回头补主线。</p>
+          </details>
+          <details>
+            <summary>为什么不同星球风格差异很大？</summary>
+            <p>这是题材刻意设计的结果。风格差异有助于区分文明，也让每个单元拥有独立的氛围。这种差异并不影响世界观统一性，反而强化了“宇宙中存在多种可能”的感觉。</p>
+          </details>
+          <details>
+            <summary>理解世界观需要记住所有阵营吗？</summary>
+            <p>不需要。先记住与主线关系密切的两三个势力即可，其余可以在剧情推进中逐步补充。阵营的意义在于解释冲突来源，而不是增加记忆负担。</p>
+          </details>
+        </div>
+      </div>
+      <aside class="panel">
+        <h3>阅读与了解建议</h3>
+        <ul class="news-list">
+          <li><span>顺序</span><p>按剧情推进顺序了解，避免直接跳到后期内容，否则容易失去上下文。</p></li>
+          <li><span>笔记</span><p>遇到反复出现的名词可以简单记录，后期回看时会明显降低理解难度。</p></li>
+          <li><span>讨论</span><p>与他人交流时注意区分“官方设定”和“个人推测”，避免把推测当成事实。</p></li>
+          <li><span>节奏</span><p>单元故事之间可以适当停顿，整理已获得的信息，比连续推进更容易记住。</p></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>星穹轨道</h4>
+        <p>围绕星际科幻题材整理的世界观、阵营、剧情与入门内容指南，帮助读者更顺畅地进入这一题材。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <a href="#concept">世界观解析</a>
+        <a href="#faction">阵营势力</a>
+        <a href="#route">剧情脉络</a>
+        <a href="#start">入门指南</a>
+      </div>
+      <div>
+        <h4>阅读方向</h4>
+        <a href="#concept">命途与力量体系</a>
+        <a href="#route">单元故事结构</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div>
+        <h4>说明</h4>
+        <p>本站内容为题材导读与整理，涉及具体作品信息请以官方发布为准。</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 星穹轨道 · 星际科幻题材导读</span>
+      <span>内容仅供了解与参考</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+  </html>
