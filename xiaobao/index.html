@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小宝与康熙优酷-剧集观看信息与角色剧情解析指南</title>
+<meta name="description" content="小宝与康熙优酷观看指南，整理剧集基本信息、主要角色关系、剧情看点、分集观看建议与常见问题，帮助观众在优酷平台顺畅了解这部古装剧。">
+<meta name="keywords" content="小宝与康熙优酷,小宝与康熙,优酷电视剧,古装剧,康熙,韦小宝,剧集观看">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1c1a17;
+  --ink-soft:#4a453e;
+  --paper:#f7f2e8;
+  --paper-2:#fffdf8;
+  --gold:#b98a2f;
+  --gold-soft:#e4c67d;
+  --red:#8c2f26;
+  --red-soft:#c05a4a;
+  --line:#e0d6c3;
+  --shadow:0 10px 30px rgba(60,45,20,.10);
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+
+/* ---------- 顶部 ---------- */
+.topbar{
+  background:linear-gradient(90deg,#2a2118,#3d2f1f 55%,#2a2118);
+  color:#f0e3c6;
+  font-size:13px;
+  letter-spacing:.5px;
+}
+.topbar .wrap{
+  max-width:1180px;margin:0 auto;padding:8px 20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.topbar span.dot{color:var(--gold-soft);margin:0 6px;}
+
+header.site-head{
+  background:var(--paper-2);
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;
+}
+.head-inner{
+  max-width:1180px;margin:0 auto;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{
+  width:44px;height:44px;border-radius:12px;flex:0 0 auto;
+  background:radial-gradient(circle at 30% 25%,#e8c887,#b98a2f 70%);
+  color:#2a2118;font-weight:800;font-size:19px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.45);
+}
+.brand-text b{display:block;font-size:19px;letter-spacing:1px;}
+.brand-text small{color:var(--ink-soft);font-size:12px;letter-spacing:2px;}
+
+nav.main-nav ul{display:flex;gap:6px;flex-wrap:wrap;}
+nav.main-nav a{
+  display:block;padding:8px 14px;border-radius:999px;font-size:14px;
+  color:var(--ink-soft);transition:.25s;
+}
+nav.main-nav a:hover{background:#f0e6d2;color:var(--red);}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 420px at 82% -10%,rgba(185,138,47,.30),transparent 62%),
+    radial-gradient(700px 380px at 8% 110%,rgba(140,47,38,.22),transparent 60%),
+    linear-gradient(160deg,#241c14,#3a2d1f 60%,#241c14);
+  color:#f6ecd8;
+}
+.hero-inner{
+  max-width:1180px;margin:0 auto;padding:56px 20px 60px;
+  display:grid;grid-template-columns:1.35fr .95fr;gap:44px;align-items:center;
+}
+.hero-tag{
+  display:inline-block;font-size:12.5px;letter-spacing:2px;
+  border:1px solid rgba(228,198,125,.55);color:var(--gold-soft);
+  padding:5px 14px;border-radius:999px;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(28px,4vw,44px);line-height:1.28;letter-spacing:1px;
+  margin-bottom:16px;font-weight:800;
+}
+.hero h1 em{font-style:normal;color:var(--gold-soft);}
+.hero p.lead{
+  font-size:15.5px;color:#e2d5bc;max-width:620px;margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px;}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;font-size:14.5px;
+  font-weight:600;letter-spacing:.5px;transition:.25s;border:1px solid transparent;
+}
+.btn-gold{background:linear-gradient(135deg,#e0bd6d,#b98a2f);color:#2a2118;}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(185,138,47,.35);}
+.btn-ghost{border-color:rgba(228,198,125,.5);color:#f0e3c6;}
+.btn-ghost:hover{background:rgba(228,198,125,.12);}
+.hero-facts{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:#cdbfa4;}
+.hero-facts b{display:block;color:#f6ecd8;font-size:16px;letter-spacing:.5px;}
+
+.hero-card{
+  background:rgba(255,253,248,.06);
+  border:1px solid rgba(228,198,125,.28);
+  border-radius:var(--radius);
+  padding:24px;backdrop-filter:blur(4px);
+}
+.hero-card h2{
+  font-size:15px;letter-spacing:2px;color:var(--gold-soft);
+  margin-bottom:16px;font-weight:700;
+}
+.hero-card dl{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px;}
+.hero-card dt{color:#b9a887;}
+.hero-card dd{color:#f3e8d2;}
+
+/* ---------- 通用区块 ---------- */
+main{max-width:1180px;margin:0 auto;padding:0 20px;}
+section.block{padding:56px 0;border-bottom:1px solid var(--line);}
+section.block:last-of-type{border-bottom:none;}
+.sec-head{margin-bottom:30px;}
+.sec-head .kicker{
+  font-size:12.5px;letter-spacing:3px;color:var(--gold);
+  text-transform:uppercase;font-weight:700;
+}
+.sec-head h2{
+  font-size:clamp(21px,2.6vw,28px);margin:8px 0 10px;letter-spacing:.5px;
+}
+.sec-head p{color:var(--ink-soft);font-size:14.5px;max-width:760px;}
+
+/* ---------- 简介 + 速览 ---------- */
+.intro-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:start;}
+.intro-text p{margin-bottom:14px;font-size:15px;color:#332e27;}
+.intro-text p strong{color:var(--red);}
+.quick-card{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);
+}
+.quick-card h3{font-size:15px;margin-bottom:14px;letter-spacing:1px;}
+.quick-card ul li{
+  display:flex;justify-content:space-between;gap:10px;
+  padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px;
+}
+.quick-card ul li:last-child{border-bottom:none;}
+.quick-card ul li span:first-child{color:var(--ink-soft);}
+.quick-card ul li span:last-child{font-weight:600;text-align:right;}
+
+/* ---------- 角色 ---------- */
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+.role-card{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;transition:.25s;
+}
+.role-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold-soft);}
+.role-card .avatar{
+  width:46px;height:46px;border-radius:50%;margin-bottom:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#fff;font-size:17px;letter-spacing:1px;
+  background:linear-gradient(135deg,var(--red-soft),var(--red));
+}
+.role-card:nth-child(2n) .avatar{background:linear-gradient(135deg,#d5b163,var(--gold));color:#33270f;}
+.role-card:nth-child(3n) .avatar{background:linear-gradient(135deg,#6d7b57,#3f4a31);}
+.role-card h3{font-size:16px;margin-bottom:6px;}
+.role-card .role-tag{font-size:12px;color:var(--gold);letter-spacing:1px;margin-bottom:8px;display:block;}
+.role-card p{font-size:13.5px;color:var(--ink-soft);}
+
+/* ---------- 看点列表 ---------- */
+.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+.hl-item{
+  background:linear-gradient(180deg,#fffdf8,#f6efdf);
+  border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+}
+.hl-item .num{
+  font-size:26px;font-weight:800;color:var(--gold-soft);
+  font-family:Georgia,serif;line-height:1;margin-bottom:10px;
+}
+.hl-item h3{font-size:16px;margin-bottom:8px;}
+.hl-item p{font-size:13.8px;color:var(--ink-soft);}
+
+/* ---------- 观看指南表格 ---------- */
+.guide-table{
+  width:100%;border-collapse:collapse;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  font-size:14px;
+}
+.guide-table th{
+  background:#efe4cf;color:#3a2f1e;font-weight:700;text-align:left;
+  padding:13px 16px;letter-spacing:.5px;font-size:13.5px;
+}
+.guide-table td{padding:13px 16px;border-top:1px solid var(--line);color:#3b352d;vertical-align:top;}
+.guide-table tr:nth-child(even) td{background:#fdfaf3;}
+.table-scroll{overflow-x:auto;border-radius:var(--radius);}
+.table-note{font-size:13px;color:#7d7362;margin-top:12px;}
+
+/* ---------- 分集节奏 ---------- */
+.pace{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+.pace-card{
+  border-left:4px solid var(--gold);background:var(--paper-2);
+  border-radius:0 var(--radius) var(--radius) 0;padding:18px 20px;
+  border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.pace-card h3{font-size:15px;margin-bottom:8px;}
+.pace-card p{font-size:13.6px;color:var(--ink-soft);}
+
+/* ---------- FAQ ---------- */
+.faq-list{display:grid;gap:12px;}
+details.faq{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:12px;
+  padding:0 20px;transition:.2s;
+}
+details.faq[open]{border-color:var(--gold-soft);box-shadow:var(--shadow);}
+details.faq summary{
+  cursor:pointer;list-style:none;padding:16px 0;font-weight:600;font-size:15px;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{
+  content:"+";color:var(--gold);font-size:20px;font-weight:700;flex:0 0 auto;
+}
+details.faq[open] summary::after{content:"−";}
+details.faq .faq-body{padding:0 0 18px;font-size:14px;color:var(--ink-soft);}
+
+/* ---------- 侧栏提示 ---------- */
+.notice{
+  margin:44px 0 0;background:#fbf4e2;border:1px dashed var(--gold-soft);
+  border-radius:var(--radius);padding:20px 24px;font-size:13.8px;color:#5a4c33;
+}
+.notice b{color:var(--red);}
+
+/* ---------- 页脚 ---------- */
+footer.site-foot{
+  background:linear-gradient(180deg,#2a2118,#1d1710);
+  color:#c9bda6;margin-top:20px;
+}
+.foot-inner{
+  max-width:1180px;margin:0 auto;padding:44px 20px 26px;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;
+}
+.foot-inner h3{font-size:15px;color:#f0e3c6;margin-bottom:14px;letter-spacing:1px;}
+.foot-inner p{font-size:13.4px;line-height:1.85;}
+.foot-inner ul li{margin-bottom:9px;font-size:13.4px;}
+.foot-inner ul a:hover{color:var(--gold-soft);}
+.foot-bottom{
+  border-top:1px solid rgba(228,198,125,.18);
+  max-width:1180px;margin:0 auto;padding:16px 20px 26px;
+  font-size:12.6px;color:#8e8471;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:30px;padding:44px 20px 50px;}
+  .intro-grid{grid-template-columns:1fr;}
+  .foot-inner{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  .head-inner{padding:12px 16px;}
+  nav.main-nav ul{gap:2px;}
+  nav.main-nav a{padding:7px 10px;font-size:13px;}
+  main{padding:0 16px;}
+  section.block{padding:40px 0;}
+  .hero-inner{padding:36px 16px 42px;}
+  .hero-facts{gap:18px;}
+  .foot-inner{grid-template-columns:1fr;gap:24px;padding:34px 16px 20px;}
+  .foot-bottom{padding:14px 16px 22px;}
+  .guide-table th,.guide-table td{padding:11px 12px;font-size:13.2px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>小宝与康熙 · 剧集资料与观看指南</span>
+    <span>优酷平台观看<span class="dot">·</span>角色关系<span class="dot">·</span>剧情看点</span>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="head-inner">
+    <div class="brand">
+      <div class="brand-mark">宝</div>
+      <div class="brand-text">
+        <b>小宝与康熙</b>
+        <small>剧集资料站</small>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#intro">剧集简介</a></li>
+        <li><a href="#roles">角色关系</a></li>
+        <li><a href="#points">剧情看点</a></li>
+        <li><a href="#watch">观看指南</a></li>
+        <li><a href="#pace">节奏建议</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-tag">古装 · 宫廷 · 江湖</span>
+      <h1>小宝与康熙：在优酷看这部<em>市井少年与少年天子</em>的古装故事</h1>
+      <p class="lead">
+        围绕韦小宝与康熙之间亦君臣、亦朋友的关系展开，从宫廷权谋到江湖恩怨，构成了这部剧最主要的叙事张力。本页整理剧集基本信息、人物关系、剧情看点与观看建议，方便你在优酷搜索前后快速建立整体印象。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#watch">查看观看指南</a>
+        <a class="btn btn-ghost" href="#roles">了解角色关系</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>古装剧</b>题材类型</div>
+        <div><b>宫廷+江湖</b>叙事背景</div>
+        <div><b>优酷</b>观看平台</div>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <h2>速览信息</h2>
+      <dl>
+        <dt>剧名</dt><dd>小宝与康熙</dd>
+        <dt>题材</dt><dd>古装、宫廷、江湖</dd>
+        <dt>核心人物</dt><dd>韦小宝、康熙</dd>
+        <dt>叙事主线</dt><dd>少年入宫、君臣相处、江湖周旋</dd>
+        <dt>观看平台</dt><dd>优酷</dd>
+        <dt>适合人群</dt><dd>喜欢古装剧与人物关系戏的观众</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<main>
+
+  <!-- 简介 -->
+  <section class="block" id="intro">
+    <div class="sec-head">
+      <div class="kicker">Synopsis</div>
+      <h2>剧集简介与故事背景</h2>
+      <p>先弄清楚它讲的是什么，再决定从哪一集开始看，会顺畅很多。</p>
+    </div>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p>
+          《小宝与康熙》以清代宫廷为背景，把<strong>市井出身的韦小宝</strong>和<strong>少年即位的康熙</strong>放在同一条叙事线上。一个来自街头、善于应变，一个身处高位、需要可信之人，两人的相遇本身就把“江湖气”和“庙堂气”拧在了一起。
+        </p>
+        <p>
+          剧中的主要矛盾并不单一：既有宫廷内部的权力博弈，也有江湖门派的恩怨纠葛，还有人物在忠诚、义气与自保之间的反复权衡。韦小宝在两边来回周旋，既要应付朝堂上的明枪暗箭，也要面对江湖中的情义牵绊，这种双重身份是整部剧最有意思的地方。
+        </p>
+        <p>
+          如果你是在优酷上看到这部剧并想了解它值不值得看，可以先明确一点：它更偏向<strong>人物关系驱动</strong>的古装剧，节奏里有不少插科打诨的轻松段落，也有相对紧张的权谋与冲突戏。喜欢看人物互动、群像关系的观众，通常更容易进入状态。
+        </p>
+        <p>
+          需要说明的是，不同版本的剧集在剧情取舍、人物侧重和集数编排上可能存在差异，具体以你在优酷平台上看到的版本信息为准。本页不提供具体播放链接，也不对平台内容作任何承诺，仅整理观看前常见的参考信息。
+        </p>
+      </div>
+      <div class="quick-card">
+        <h3>适合谁看</h3>
+        <ul>
+          <li><span>喜欢古装宫廷题材</span><span>推荐</span></li>
+          <li><span>喜欢人物关系群像</span><span>推荐</span></li>
+          <li><span>偏好快节奏强冲突</span><span>可选</span></li>
+          <li><span>只想看单一类型</span><span>需斟酌</span></li>
+          <li><span>对江湖+朝堂混合</span><span>推荐</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 角色 -->
+  <section class="block" id="roles">
+    <div class="sec-head">
+      <div class="kicker">Characters</div>
+      <h2>主要角色与关系脉络</h2>
+      <p>理清人物关系，是看懂这部剧的第一件事。以下为常见角色类型的概括说明。</p>
+    </div>
+    <div class="roles">
+      <article class="role-card">
+        <div class="avatar">宝</div>
+        <h3>韦小宝</h3>
+        <span class="role-tag">市井出身 · 机变灵活</span>
+        <p>故事的核心视角人物。出身底层，擅长察言观色与随机应变，在宫廷与江湖之间来回周旋，是推动剧情的关键。</p>
+      </article>
+      <article class="role-card">
+        <div class="avatar">康</div>
+        <h3>康熙</h3>
+        <span class="role-tag">少年天子 · 用人之道</span>
+        <p>身处权力中心，需要在复杂局势中判断可用之人。与韦小宝之间的信任与试探，构成了剧中重要的情感支点。</p>
+      </article>
+      <article class="role-card">
+        <div class="avatar">朝</div>
+        <h3>朝堂群臣</h3>
+        <span class="role-tag">权谋博弈</span>
+        <p>朝堂线的主要推动者，立场各异，围绕权力与利益展开明争暗斗，为剧情提供冲突来源。</p>
+      </article>
+      <article class="role-card">
+        <div class="avatar">江</div>
+        <h3>江湖人物</h3>
+        <span class="role-tag">义气与恩怨</span>
+        <p>江湖线代表人物的统称，讲究情义与规矩，与朝堂线形成对照，也让主角的身份更加复杂。</p>
+      </article>
+      <article class="role-card">
+        <div class="avatar">伴</div>
+        <h3>身边同伴</h3>
+        <span class="role-tag">情感与牵绊</span>
+        <p>围绕主角展开的同伴关系，承载了剧中的情感线，也常在关键时刻影响主角的选择。</p>
+      </article>
+      <article class="role-card">
+        <div class="avatar">势</div>
+        <h3>各方势力</h3>
+        <span class="role-tag">背景推动</span>
+        <p>不属于单一阵营的势力群体，其行动往往牵动全局，是理解剧情走向的重要背景。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 看点 -->
+  <section class="block" id="points">
+    <div class="sec-head">
+      <div class="kicker">Highlights</div>
+      <h2>剧情看点与观看理由</h2>
+      <p>从题材、人物到节奏，这部剧的吸引力主要集中在以下几个方面。</p>
+    </div>
+    <div class="highlights">
+      <article class="hl-item">
+        <div class="num">01</div>
+        <h3>双重身份的张力</h3>
+        <p>主角同时游走于宫廷与江湖，身份切换带来的处境变化，是剧情持续产生冲突的根本原因。</p>
+      </article>
+      <article class="hl-item">
+        <div class="num">02</div>
+        <h3>君臣关系的刻画</h3>
+        <p>少年天子与身边人之间的信任、试探与依赖，让权力关系之外多了一层人情味。</p>
+      </article>
+      <article class="hl-item">
+        <div class="num">03</div>
+        <h3>轻松与紧张交替</h3>
+        <p>插科打诨的段落与权谋冲突相互穿插，观感上有张有弛，不容易一直紧绷。</p>
+      </article>
+      <article class="hl-item">
+        <div class="num">04</div>
+        <h3>群像关系丰富</h3>
+        <p>朝堂、江湖、同伴多条人物线并行，配角各有立场，适合喜欢看群像戏的观众。</p>
+      </article>
+      <article class="hl-item">
+        <div class="num">05</div>
+        <h3>江湖义气元素</h3>
+        <p>门派、规矩、恩怨等江湖设定，为宫廷线之外提供了另一种价值判断和冲突逻辑。</p>
+      </article>
+      <article class="hl-item">
+        <div class="num">06</div>
+        <h3>古装氛围感</h3>
+        <p>服化道与场景围绕古代背景展开，整体观感统一，适合偏好传统古装题材的观众。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 观看指南 -->
+  <section class="block" id="watch">
+    <div class="sec-head">
+      <div class="kicker">Watch Guide</div>
+      <h2>在优酷观看前的准备与建议</h2>
+      <p>下面这些准备动作，能帮你在搜索和观看时少走弯路。</p>
+    </div>
+    <div class="table-scroll">
+      <table class="guide-table">
+        <thead>
+          <tr>
+            <th>环节</th>
+            <th>建议做法</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>搜索</td>
+            <td>在优酷搜索框输入完整剧名</td>
+            <td>剧名较长时，输入完整名称更容易定位到对应条目，避免与其他同题材作品混淆。</td>
+          </tr>
+          <tr>
+            <td>确认版本</td>
+            <td>核对简介、集数与年份</td>
+            <td>同一题材可能存在多个版本，观看前核对页面信息，能避免看错内容。</td>
+          </tr>
+          <tr>
+            <td>画质选择</td>
+            <td>根据网络情况选择清晰度</td>
+            <td>网络稳定时可选较高清晰度；移动网络下建议适当降低，减少卡顿。</td>
+          </tr>
+          <tr>
+            <td>观看顺序</td>
+            <td>按平台默认集数顺序观看</td>
+            <td>人物关系是逐步展开的，跳集容易错过关键铺垫。</td>
+          </tr>
+          <tr>
+            <td>字幕与音轨</td>
+            <td>按个人习惯开启</td>
+            <td>部分设备支持字幕与音轨切换，可按需设置。</td>
+          </tr>
+          <tr>
+            <td>观看环境</td>
+            <td>提前确认账号与会员状态</td>
+            <td>不同内容可能有不同的观看权限，提前确认可减少中途打断。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">以上为通用观看建议，具体功能与设置以优酷平台当前实际页面为准。</p>
+  </section>
+
+  <!-- 节奏 -->
+  <section class="block" id="pace">
+    <div class="sec-head">
+      <div class="kicker">Pacing</div>
+      <h2>不同观看节奏的选择</h2>
+      <p>根据你的时间安排，可以选择不同的观看方式。</p>
+    </div>
+    <div class="pace">
+      <article class="pace-card">
+        <h3>完整顺序观看</h3>
+        <p>从第一集开始按顺序推进，人物关系的建立和剧情伏笔最完整，适合第一次接触这部剧的观众。</p>
+      </article>
+      <article class="pace-card">
+        <h3>分段集中观看</h3>
+        <p>按剧情阶段分成几段集中观看，比如宫廷线为主的部分和江湖线为主的部分，适合时间不连续的观众。</p>
+      </article>
+      <article class="pace-card">
+        <h3>重点回看</h3>
+        <p>已经看过的情况下，可以挑自己偏好的角色线或冲突段落回看，节奏更自由，但会损失整体连贯感。</p>
+      </article>
+      <article class="pace-card">
+        <h3>陪看与讨论</h3>
+        <p>和他人一起观看时，建议放慢节奏，方便交流人物关系与剧情走向，体验会更轻松。</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="sec-head">
+      <div class="kicker">FAQ</div>
+      <h2>常见问题</h2>
+      <p>围绕“小宝与康熙优酷”这一搜索意图，整理几个观众常问的问题。</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>在优酷怎么找到这部剧？</summary>
+        <div class="faq-body">
+          打开优酷客户端或网页版，在搜索框中输入完整剧名“小宝与康熙”，从搜索结果中核对简介、集数与年份等信息，确认是你要看的版本后再进入播放页。不同版本的条目信息可能不同，核对一下更稳妥。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>这部剧主要讲的是什么？</summary>
+        <div class="faq-body">
+          整体围绕市井出身的韦小宝与少年康熙之间的相处展开，同时穿插宫廷权谋与江湖恩怨两条线索。主角在两种身份之间来回周旋，是剧情的主要推动力。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>需要按顺序从头看吗？</summary>
+        <div class="faq-body">
+          建议按顺序观看。人物关系和立场是逐步铺开的，跳集容易对不上前因后果。如果只是想回顾某个角色线，可以单独挑相关段落回看。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>观看时需要注意什么？</summary>
+        <div class="faq-body">
+          一是确认版本信息，避免看错；二是留意账号与观看权限状态；三是根据网络情况选择合适的清晰度。以上都是通用建议，具体以平台当前页面为准。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>页面会提供播放链接或资源吗？</summary>
+        <div class="faq-body">
+          不会。本页仅整理剧集相关的公开信息与观看建议，帮助你在优酷上自行搜索和判断，不提供任何播放地址、下载渠道或资源链接。
+        </div>
+      </details>
+      <details class="faq">
+        <summary>剧集信息为什么可能和别处不一样？</summary>
+        <div class="faq-body">
+          同一题材在不同时期、不同平台可能存在版本差异，集数、剪辑和简介表述都可能不同。遇到不一致时，以你实际观看的平台页面信息为准。
+        </div>
+      </details>
+    </div>
+
+    <div class="notice">
+      <b>温馨提示：</b>本页为剧集资料与观看指引类内容，不提供在线播放、下载或任何形式的资源获取方式。请通过正规平台观看，并注意合理安排观看时间。
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div>
+      <h3>关于本站</h3>
+      <p>
+        本站围绕《小宝与康熙》整理剧集基本信息、角色关系、剧情看点与观看建议，帮助观众在优酷搜索和观看前建立整体认识。内容以公开信息为基础，不涉及任何播放资源。
+      </p>
+    </div>
+    <div>
+      <h3>内容导航</h3>
+      <ul>
+        <li><a href="#intro">剧集简介</a></li>
+        <li><a href="#roles">角色关系</a></li>
+        <li><a href="#points">剧情看点</a></li>
+        <li><a href="#watch">观看指南</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>相关主题</h3>
+      <ul>
+        <li><a href="#pace">观看节奏建议</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#intro">故事背景说明</a></li>
+        <li><a href="#watch">平台观看准备</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>小宝与康熙 · 剧集资料与观看指南</span>
+    <span>内容仅供参考，具体以平台页面信息为准</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var details = document.querySelectorAll('details.faq');
+  details.forEach(function(item){
+    item.addEventListener('toggle', function(){
+      if(item.open){
+        details.forEach(function(other){
+          if(other !== item){ other.open = false; }
+        });
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+  </html>
